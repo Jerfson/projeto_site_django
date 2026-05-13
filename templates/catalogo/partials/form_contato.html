@@ -1,0 +1,16 @@
+<form class="contact-form quote-form" method="post">
+    {% csrf_token %}
+    <div class="form-heading">
+        <strong>{{ config.form_titulo|default:"Solicitação de orçamento" }}</strong>
+        <span>{{ config.form_subtitulo|default:"Quanto mais detalhes você enviar, mais certeira fica a resposta." }}</span>
+    </div>
+    {{ form.non_field_errors }}
+    <div class="form-grid">
+        <label>Nome {{ form.nome }}</label>
+        <label>WhatsApp {{ form.telefone }}</label>
+    </div>
+    <label>E-mail {{ form.email }}</label>
+    <label>Interesse {{ form.interesse }}</label>
+    <label>Mensagem {{ form.mensagem }}</label>
+    <button class="button button-primary" type="submit">{{ config.form_botao|default:"Enviar pedido de orçamento" }}</button>
+</form>

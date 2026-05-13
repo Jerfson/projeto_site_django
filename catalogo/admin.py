@@ -16,6 +16,7 @@ class ConfiguracaoSiteAdmin(admin.ModelAdmin):
                 'tamanho_fonte_subtitulo',
                 'imagem_principal',
                 'imagem_principal_mobile',
+                'opacidade_hero',
             )
         }),
         ('Contato e WhatsApp', {

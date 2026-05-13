@@ -77,7 +77,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://site.reboqueспrime.com.br', 'http://site.reboqueспrime.com.br']
+CSRF_TRUSTED_ORIGINS = ['https://site.reboquesprime.com.br', 'http://site.reboquesprime.com.br']
 
 # E-mail
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

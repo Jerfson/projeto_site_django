@@ -920,12 +920,7 @@ h3 {
 }
 
 .main-photo::after {
-    position: absolute;
-    inset: auto 0 0;
-    height: 34%;
-    content: "";
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.55), transparent);
-    pointer-events: none;
+    display: none;
 }
 
 .detail-media > img,

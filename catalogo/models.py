@@ -15,6 +15,7 @@ class ConfiguracaoSite(models.Model):
     tamanho_fonte_subtitulo = models.PositiveIntegerField('tamanho da fonte do subtítulo', default=20)
     imagem_principal = models.ImageField('imagem principal (desktop)', upload_to='site/', blank=True)
     imagem_principal_mobile = models.ImageField('imagem principal (mobile)', upload_to='site/', blank=True, help_text='Opcional. Se vazio, usa a imagem desktop no mobile também.')
+    opacidade_hero = models.FloatField('opacidade do overlay da hero (0.0 a 1.0)', default=0.5, help_text='0.0 = transparente, 1.0 = totalmente escuro')
     telefone = models.CharField('telefone/WhatsApp', max_length=30, blank=True)
     email = models.EmailField('e-mail', blank=True)
     endereco = models.CharField('endereço', max_length=180, blank=True)

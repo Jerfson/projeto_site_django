@@ -143,7 +143,6 @@ a {
 
 .hero-image {
     object-fit: cover;
-    opacity: 0.4;
     animation: heroZoom 14s ease-out forwards;
 }
 
@@ -155,9 +154,10 @@ a {
 }
 
 .hero-overlay {
+    --overlay-opacity: 0.5;
     background:
-        linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4) 55%, rgba(0, 0, 0, 0.1)),
-        linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent 50%);
+        linear-gradient(90deg, rgba(0, 0, 0, var(--overlay-opacity)), rgba(0, 0, 0, calc(var(--overlay-opacity) * 0.44)) 55%, rgba(0, 0, 0, calc(var(--overlay-opacity) * 0.11))),
+        linear-gradient(0deg, rgba(0, 0, 0, calc(var(--overlay-opacity) * 0.67)), transparent 50%);
 }
 
 .hero-content {
@@ -401,12 +401,7 @@ h3 {
 }
 
 .product-media::after {
-    position: absolute;
-    inset: auto 0 0;
-    height: 45%;
-    content: "";
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), transparent);
-    pointer-events: none;
+    display: none;
 }
 
 .product-media img {
@@ -414,13 +409,11 @@ h3 {
     width: 100%;
     aspect-ratio: 16 / 11;
     object-fit: cover;
-    filter: brightness(0.8);
-    transition: transform 420ms ease, filter 420ms ease;
+    transition: transform 420ms ease;
 }
 
 .product-card:hover .product-media img {
     transform: scale(1.04);
-    filter: brightness(1);
 }
 
 .product-badge {

@@ -9,7 +9,7 @@
     {% if config.imagem_principal_mobile %}
         <img class="hero-image hero-image--mobile" src="{{ config.imagem_principal_mobile.url }}" alt="{{ config.nome_empresa }}">
     {% endif %}
-    <div class="hero-overlay" style="opacity: {{ config.opacidade_hero }};"></div>
+    <div class="hero-overlay" style="--overlay-opacity: {{ config.opacidade_hero|floatdot }};"></div>
     <div class="hero-content">
         {% if config.slogan %}<h1 style="--hero-title-size: {{ config.tamanho_fonte_titulo }}px;">{{ config.slogan }}</h1>{% endif %}
         {% if config.texto_principal %}<p class="hero-text" style="--hero-subtitle-size: {{ config.tamanho_fonte_subtitulo }}px;">{{ config.texto_principal }}</p>{% endif %}
